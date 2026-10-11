@@ -119,9 +119,9 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 	},
 	{
-		title: "Miku社区",
+		title: "CyaniAgent CN",
 		imgurl: "https://www.google.com/s2/favicons?domain=cyaniagent.com&sz=64",
-		desc: "Miku 社区",
+		desc: "CyaniAgent 社区",
 		siteurl: "https://cyaniagent.com/",
 		tags: ["community"],
 		weight: 10,
