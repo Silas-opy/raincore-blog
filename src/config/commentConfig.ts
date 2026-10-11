@@ -47,7 +47,7 @@ export const commentConfig: CommentConfig = {
 	//giscus评论系统配置
 	giscus: {
 		// 设置 Giscus 评论系统仓库
-		repo: "RainCore1115/raincore-blog",
+		repo: "Silas-opy/raincore-blog",
 		// 设置 Giscus 评论系统仓库ID（请在 giscus.app 获取）
 		repoId: "",
 		// 设置 Giscus 评论系统分类
