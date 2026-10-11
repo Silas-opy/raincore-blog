@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon/components";
+import { tools } from "@/config/toolsConfig";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+---
+
+<MainGridLayout title="工具导航" description="常用工具网址大全">
+  <div class="card-base z-10 px-9 py-6 relative w-full rounded-(--radius-large)">
+    <!-- 标题 -->
+    <div class="mb-4">
+      <div class="flex items-center gap-3 mb-3">
+        <div
+          class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70"
+        >
+          <Icon name="material-symbols:handyman-outline" class="text-[1.5rem]" />
+        </div>
+        <div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
+          工具导航
+        </div>
+      </div>
+      <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+        收藏的实用工具与资源网站，共 {tools.length} 个。
+      </p>
+    </div>
+
+    <!-- 工具网格 -->
+    <div class="tools-grid my-4">
+      {
+        tools.map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card group flex items-center gap-3 p-3 rounded-xl border border-(--line-divider) hover:border-(--primary) hover:bg-(--card-bg) transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-(--primary) opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+            <div
+              class="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 border border-black/5 dark:border-white/5 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+            >
+              <img
+                src={`https://www.google.com/s2/favicons?domain=${item.url.replace(/^https?:\/\//, "").split("/")[0]}&sz=64`}
+                alt={item.title}
+                class="w-6 h-6 object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div class="grow min-w-0 flex flex-col justify-center gap-0.5">
+              <div class="flex items-center justify-between">
+                <div class="font-bold text-base text-neutral-900 dark:text-neutral-100 group-hover:text-(--primary) transition-colors truncate pr-4">
+                  {item.title}
+                </div>
+                <Icon
+                  name="material-symbols:arrow-outward-rounded"
+                  class="text-(--primary) text-lg opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                />
+              </div>
+              <div
+                class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1"
+                title={item.desc}
+              >
+                {item.desc}
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</MainGridLayout>
+
+<style is:global>
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+</style>

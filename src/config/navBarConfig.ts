@@ -70,16 +70,15 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/raincore1115",
-				external: true,
-				icon: "fa7-brands:github",
+				name: "工具导航",
+				url: "/tools/",
+				icon: "material-symbols:handyman-outline",
 			},
 			{
-				name: "QQ群",
-				url: "https://qun.qq.com/universal-share/share?ac=1&authKey=drNMAtD7%2Ba4aEBEAyzRprgEx3Acy1u58d7zFWvGXjEulx%2BRyTT3aKL2GM%2F0%2BQWho&busi_data=eyJncm91cENvZGUiOiI5NzU5OTU3MDUiLCJ0b2tlbiI6IjFaRHVKTzFRTWZtVzhuejdYMWdIM0MrUnpabE90anRpVmZrUWo1b3FvSzVMWTdOazRiTnZYNnZYb1VuSUt1R2EiLCJ1aW4iOiIxMDU4MjMzOTUifQ%3D%3D&data=51kQJLmxtwhT3qobZOEDhBSavnoCOlQhKEfBhD0wTahM5Jz4yDJeqbzlGqR833SC1N5PgdZMgnzrShgT94ISDg&svctype=4&tempid=h5_group_info",
+				name: "GitHub",
+				url: "https://github.com/Silas-opy",
 				external: true,
-				icon: "fa7-brands:qq",
+				icon: "fa7-brands:github",
 			},
 		],
 	});

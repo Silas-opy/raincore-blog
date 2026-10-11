@@ -192,6 +192,7 @@ export type ProfileConfig = {
 	avatar?: string;
 	name: string;
 	bio?: string;
+	githubUsername?: string;
 	links: {
 		name: string;
 		url: string;
