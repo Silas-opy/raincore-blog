@@ -1,13 +1,14 @@
 ---
-title: 我的博客上线记：从 fork 到 silasrxs.top
+title: 搭建过程
 published: 2026-10-11
 description: "记录我如何把一个 fork 来的博客模板，一步步改造成自己的网站并部署上线，顺便分享踩过的坑。"
+image: "assets/images/silas-banner.jpg"
 tags: ["建站", "折腾", "Astro", "随笔"]
 category: "折腾"
 draft: false
 ---
 
-# 我的博客上线记 🚀
+# 搭建过程 🚀
 
 今天干成了一件大事：**我的个人博客 silasrxs.top 正式上线了**。
 
