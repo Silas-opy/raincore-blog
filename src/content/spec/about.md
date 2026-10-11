@@ -1,37 +1,16 @@
 # 关于我 / About Me
 
-Hello！I'm RainCore，a music creator, open-source advocate, developer, and rhythm game enthusiast
+你好！我是 **Silas若虚生**，正在学习 Python（爬虫 / 运维 / 数据处理方向），喜欢折腾各种有趣的技术。
 
 ## 🛠️ 关于本站
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+本站使用 **Astro** 框架构建，基于 [Firefly](https://github.com/CuteLeaf/Firefly) 模板（基于 [Fuwari](https://github.com/saicaca/fuwari) 二次开发）。
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+这里会记录我的学习笔记、技术分享和生活点滴，欢迎常来逛逛～
 
+## 📮 联系我
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
-
-**🏠我的博客： [https://blog.baka86.love](https://blog.baka86.love/)**
-
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
-
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
-
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
-
-
-## 📫 联系方式
-
-如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
-
-- 💻 **GitHub**: [raincore1115](https://github.com/raincore1115)
-- ✉️ **Email**: [raincore@baka86.love](mailto:raincore@baka86.love)
-- 🐧 **QQ交流群：[975995705](https://qm.qq.com/q/HUODrQ5Xi2)**
-
----
-
-*感谢你的来访！希望在这里能找到对你有用的内容！*
+- QQ：3450717842
+- 微信：xmzxmz963852
+- Email：[3450717842@qq.com](mailto:3450717842@qq.com)
+- GitHub：[Silas-opy](https://github.com/Silas-opy)

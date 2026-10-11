@@ -7,20 +7,20 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "雨核の个人博客",
+	title: "Silas若虚生的个人博客",
 
 	// 站点副标题
 	subtitle: "",
 
 	// 站点 URL
-	site_url: "https://blog.baka86.love",
+	site_url: "https://silas-opy.github.io",
 
 	// 站点描述
 	description:
-		"雨核的个人博客，记录开发进度、技术分享与和SoupIsWater交往的点滴。一个音乐创作者、开源爱好者、开发者与音游爱好者的个人空间。",
+		"Silas若虚生的个人博客，记录学习笔记、技术分享与生活点滴。",
 
 	// 站点关键词
-	keywords: ["RainCore", "雨核", "博客", "技术博客", "开发", "静态博客"],
+	keywords: ["Silas", "若虚生", "博客", "技术博客", "开发", "静态博客"],
 
 	// 主题色
 	themeColor: {
@@ -71,7 +71,7 @@ export const siteConfig: SiteConfig = {
 			alt: "🍀",
 		},
 		// 导航栏标题
-		title: "raincore's blog",
+		title: "silas's blog",
 		// 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
@@ -81,7 +81,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 站点开始日期，用于统计运行天数（取仓库首次提交日期）
-	siteStartDate: "2026-04-21",
+	siteStartDate: "2026-10-11",
 
 	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
 	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
@@ -119,7 +119,7 @@ export const siteConfig: SiteConfig = {
 	// bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
 	pages: {
 		// 赞助页面开关
-		sponsor: true,
+		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
 		guestbook: false,
 		// 番组计划页面开关，含追番、游戏、书籍和音乐，dev调试时只获取一页数据，build才会获取全部数据
@@ -161,17 +161,17 @@ export const siteConfig: SiteConfig = {
 		// Umami 统计（自建）
 		umamiAnalytics: {
 			// Umami Website ID（data-website-id）
-			websiteId: "8b381dd6-7307-4a57-936f-1cfa3e96f4dc",
+			websiteId: "",
 			// Umami JS 地址，留空则不加载
-			scriptUrl: "https://u.a.07210700.xyz/script.js",
+			scriptUrl: "",
 			// Umami 会话录制脚本地址（可选），留空则不加载
-			recorderUrl: "https://u.a.07210700.xyz/recorder.js",
+			recorderUrl: "",
 			// Umami 分享统计配置：公开读取统计数据（总访问量/总访问人数/单篇浏览量）
-			shareId: "tOwoYuc6fR70LBSP",
-			shareUrl: "https://u.a.07210700.xyz/share/tOwoYuc6fR70LBSP",
+			shareId: "",
+			shareUrl: "",
 			stats: {
-				enable: true,
-				baseUrl: "https://u.a.07210700.xyz",
+				enable: false,
+				baseUrl: "",
 				startAt: 0,
 				cacheTtl: 3_600_000,
 			},

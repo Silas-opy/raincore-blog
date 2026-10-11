@@ -43,3 +43,6 @@ package/
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# 本地音乐文件（体积过大，不上传仓库；改用网易云在线歌单）
+public/assets/music/

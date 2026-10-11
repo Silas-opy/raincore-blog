@@ -6,16 +6,16 @@ export const profileConfig: ProfileConfig = {
 	// 1. public 目录（以 "/" 开头，不优化）："/assets/images/avatar.webp"
 	// 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/avatar.webp"
 	// 3. 远程 URL："https://example.com/avatar.jpg"
-	avatar: "https://q1.qlogo.cn/g?b=qq&nk=105823395&s=640",
+	avatar: "assets/images/avatar.jpg",
 
 	// 名字
-	name: "RainCore",
+	name: "Silas若虚生",
 
 	// 个人签名
-	bio: "and in that light, I find deliverance.",
+	bio: "Welcome to my personal blog.",
 
 	// GitHub 用户名
-	githubUsername: "raincore1115",
+	githubUsername: "Silas-opy",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -25,27 +25,34 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "qq",
+			name: "QQ",
 			icon: "fa7-brands:qq",
-			url: "https://qun.qq.com/universal-share/share?ac=1&authKey=drNMAtD7%2Ba4aEBEAyzRprgEx3Acy1u58d7zFWvGXjEulx%2BRyTT3aKL2GM%2F0%2BQWho&busi_data=eyJncm91cENvZGUiOiI5NzU5OTU3MDUiLCJ0b2tlbiI6IjFaRHVKTzFRTWZtVzhuejdYMWdIM0MrUnpabE90anRpVmZrUWo1b3FvSzVMWTdOazRiTnZYNnZYb1VuSUt1R2EiLCJ1aW4iOiIxMDU4MjMzOTUifQ%3D%3D&data=51kQJLmxtwhT3qobZOEDhBSavnoCOlQhKEfBhD0wTahM5Jz4yDJeqbzlGqR833SC1N5PgdZMgnzrShgT94ISDg&svctype=4&tempid=h5_group_info",
+			url: "tencent://message/?uin=3450717842&Site=&Menu=yes",
 			showName: false,
 		},
 		{
-			name: "QQ群",
-			icon: "fa7-brands:qq",
-			url: "https://qun.qq.com/universal-share/share?ac=1&authKey=drNMAtD7%2Ba4aEBEAyzRprgEx3Acy1u58d7zFWvGXjEulx%2BRyTT3aKL2GM%2F0%2BQWho&busi_data=eyJncm91cENvZGUiOiI5NzU5OTU3MDUiLCJ0b2tlbiI6IjFaRHVKTzFRTWZtVzhuejdYMWdIM0MrUnpabE90anRpVmZrUWo1b3FvSzVMWTdOazRiTnZYNnZYb1VuSUt1R2EiLCJ1aW4iOiIxMDU4MjMzOTUifQ%3D%3D&data=51kQJLmxtwhT3qobZOEDhBSavnoCOlQhKEfBhD0wTahM5Jz4yDJeqbzlGqR833SC1N5PgdZMgnzrShgT94ISDg&svctype=4&tempid=h5_group_info",
-			showName: false,
+			name: "微信 xmzxmz963852",
+			icon: "fa7-brands:weixin",
+			// 微信没有可点击的在线链接，悬停/名称中展示微信号
+			url: "#",
+			showName: true,
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/raincore1115",
+			url: "https://github.com/Silas-opy",
 			showName: false,
+		},
+		{
+			name: "哔哩哔哩 若虚生P",
+			icon: "fa7-brands:bilibili",
+			url: "https://space.bilibili.com/",
+			showName: true,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:raincore@baka86.love",
+			url: "mailto:3450717842@qq.com",
 			showName: false,
 		},
 	],

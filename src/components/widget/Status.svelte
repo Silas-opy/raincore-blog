@@ -3,7 +3,7 @@ import { onDestroy, onMount } from "svelte";
 import { renderIcon } from "../../utils/widget-icons";
 
 // 数据源：时间雨 API
-//   GET {API_BASE}/group-map                -> { "雨核": ["yuhe-pc", "yuhe-sanxing"], ... }
+//   GET {API_BASE}/group-map                -> { "我的设备": ["yuhe-pc", ...], ... }
 //   GET {API_BASE}/v2/status?machine=<名>   -> 单个设备状态对象
 // 组件设计参考 https://shijian.07210700.xyz/ ：
 //   设备清单自动发现、在线汇总、倒计时自动刷新、手动刷新、隐私模式提示。
@@ -16,7 +16,14 @@ const FETCH_TIMEOUT = 12 * 1000;
 /** 超过该时长未上传数据视为离线（3 分钟） */
 const OFFLINE_THRESHOLD = 3 * 60 * 1000;
 /** 在 group-map 里取哪一组的设备 */
-const GROUP_NAME = "雨核";
+const GROUP_NAME = "我的设备";
+
+/**
+ * 是否已接入自己的设备监控服务。
+ * 当前为 false：组件不请求任何第三方接口，仅显示占位。
+ * 将来接入自己的监控服务后，改为 true 并把 API_BASE 换成自己的地址。
+ */
+const MONITORING_ENABLED = false;
 
 interface Activity {
 	machine?: string;
@@ -64,13 +71,11 @@ interface DeviceConfig {
 
 /** 已知设备的友好名称与类型；其余设备按名字猜类型 */
 const KNOWN_DEVICES: Record<string, { name: string; kind: "desktop" | "phone" }> = {
-	"yuhe-pc": { name: "雨核的电脑", kind: "desktop" },
-	"yuhe-sanxing": { name: "雨核的手机", kind: "phone" },
+	"yuhe-pc": { name: "我的电脑", kind: "desktop" },
 };
 
 const FALLBACK_DEVICES: DeviceConfig[] = [
-	{ machine: "yuhe-pc", name: "雨核的电脑", kind: "desktop" },
-	{ machine: "yuhe-sanxing", name: "雨核的手机", kind: "phone" },
+	{ machine: "yuhe-pc", name: "我的电脑", kind: "desktop" },
 ];
 
 function describeMachine(machine: string): DeviceConfig {
@@ -94,9 +99,14 @@ let now = Date.now();
 let ticker: ReturnType<typeof setInterval> | undefined;
 
 onMount(async () => {
-	await ensureDevices();
-	await fetchAll();
-	ticker = setInterval(tick, 1000);
+	if (MONITORING_ENABLED) {
+		await ensureDevices();
+		await fetchAll();
+		ticker = setInterval(tick, 1000);
+	} else {
+		// 未接入监控服务，直接进入占位状态
+		loading = false;
+	}
 });
 
 onDestroy(() => {
@@ -126,17 +136,21 @@ async function fetchJson<T>(url: string): Promise<T> {
 	}
 }
 
-/** 用 group-map 自动发现「雨核」名下的设备，失败时回退到写死的两台 */
+/** 用 group-map 自动发现设备（当前已停用第三方 API，直接使用默认设备列表） */
 async function ensureDevices() {
-	try {
-		const map = await fetchJson<Record<string, string[]>>(`${API_BASE}/group-map`);
-		const list = map?.[GROUP_NAME];
-		if (Array.isArray(list) && list.length > 0) {
-			devices = list.map(describeMachine);
-		}
-	} catch (err) {
-		console.warn("获取视奸名单失败，使用默认设备列表:", err);
-	}
+	// 暂时不请求第三方时间雨 API，直接使用 FALLBACK_DEVICES。
+	// 将来接入自己的监控服务时，把下面这段注释的请求恢复即可：
+	//
+	// try {
+	// 	const map = await fetchJson<Record<string, string[]>>(`${API_BASE}/group-map`);
+	// 	const list = map?.[GROUP_NAME];
+	// 	if (Array.isArray(list) && list.length > 0) {
+	// 		devices = list.map(describeMachine);
+	// 	}
+	// } catch (err) {
+	// 	console.warn("获取设备列表失败，使用默认设备列表:", err);
+	// }
+	devices = FALLBACK_DEVICES;
 }
 
 async function fetchAll() {
@@ -329,6 +343,9 @@ $: allOffline = onlineTotal === 0;
 </script>
 
 <div class="status-widget">
+    {#if !MONITORING_ENABLED}
+        <div class="status-hint">设备状态监控尚未接入，敬请期待～</div>
+    {:else}
     <div class="status-summary">
         <span class="summary-online">
             <span class="dot" class:live={!allOffline}></span>
@@ -415,6 +432,7 @@ $: allOffline = onlineTotal === 0;
             </button>
         </span>
     </div>
+    {/if}
 </div>
 
 <style>

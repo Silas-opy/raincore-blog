@@ -37,9 +37,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	 */
 	src: {
 		// 桌面背景图片（支持单张或多张随机）
-		desktop: "assets/images/banner.jpg",
+		desktop: "assets/images/silas-banner.jpg",
 		// 移动背景图片（支持单张或多张随机）
-		mobile: "assets/images/banner.jpg",
+		mobile: "assets/images/silas-banner.jpg",
 	},
 	// Banner模式特有配置
 	banner: {
@@ -55,11 +55,11 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely SoupIsWater",
+			title: "Silas若虚生",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
-			subtitle: ['"and in that light,I find deliverance."'],
+			subtitle: ['"Welcome to Silas\'s personal blog"'],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
 			typewriter: {
