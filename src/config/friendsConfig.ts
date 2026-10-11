@@ -118,6 +118,24 @@ export const friendsConfig: FriendLink[] = [
 		weight: 10,
 		enabled: true,
 	},
+	{
+		title: "Miku社区",
+		imgurl: "https://www.google.com/s2/favicons?domain=cyaniagent.com&sz=64",
+		desc: "Miku 社区",
+		siteurl: "https://cyaniagent.com/",
+		tags: ["community"],
+		weight: 10,
+		enabled: true,
+	},
+	{
+		title: "白葱社区",
+		imgurl: "https://www.google.com/s2/favicons?domain=hub.imikufans.com&sz=64",
+		desc: "白葱社区",
+		siteurl: "https://hub.imikufans.com/",
+		tags: ["community"],
+		weight: 10,
+		enabled: true,
+	},
 ];
 
 // 获取启用的友链并进行排序
