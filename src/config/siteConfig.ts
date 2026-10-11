@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "",
 
 	// 站点 URL
-	site_url: "https://silas-opy.github.io",
+	site_url: "https://silasrxs.top",
 
 	// 站点描述
 	description:
