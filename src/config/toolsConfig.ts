@@ -12,7 +12,6 @@ export const tools: ToolItem[] = [
 	{ title: "galgame大全", desc: "galgame大全", url: "https://gal.saop.cc/categories/android/" },
 	{ title: "mc红石制作", desc: "mc红石制作", url: "https://mcpixelart.com" },
 	{ title: "音律屋", desc: "音律屋可搜索/资源严选下载插件，含肥波臭氧waves套装教学", url: "http://yinlvwu.com/" },
-	{ title: "miku社区（新）", desc: "miku社区（新）status.cyaniagent.com", url: "https://vb.vocakey.wiki/" },
 	{ title: "稣知", desc: "稣知", url: "https://suzhi.cc/" },
 	{ title: "人声分离", desc: "人声分离", url: "https://vocalremover.org/" },
 	{ title: "美化预设", desc: "美化预设", url: "https://re.xcdream.com/" },
